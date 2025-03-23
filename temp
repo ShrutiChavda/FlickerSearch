@@ -1,0 +1,883 @@
+Tutorial 0
+
+1. TensorFlow 
+ Description: An open-source machine learning library developed by Google, 
+used for building and deploying ML and deep learning models. 
+ Use Cases: Image recognition, NLP, recommendation systems, and robotics. 
+ Key Features: Scalable across platforms, supports hardware acceleration 
+(GPUs/TPUs), integrates with TensorFlow Lite and TensorFlow.js for mobile and 
+web deployment. 
+2. PyTorch 
+ Description: A deep learning library developed by Facebook, known for its 
+dynamic computation graph and ease of experimentation. 
+ Use Cases: Research in AI, computer vision, NLP, and reinforcement learning. 
+ Key Features: Dynamic computation graphs, GPU acceleration, native Python 
+integration, and TorchServe for model deployment. 
+3. Keras 
+ Description: A high-level deep learning API built on TensorFlow for rapid 
+prototyping of neural networks. 
+ Use Cases: Neural network design, image classification, and text generation. 
+ Key Features: User-friendly, modular, supports multiple backends, and 
+simplifies complex model building. 
+4. OpenCV 
+ Description: An open-source library for computer vision and image processing 
+tasks.
+ Use Cases: Face detection, object tracking, image filtering, and AR 
+applications. 
+ Key Features: Extensive image and video processing functions, real-time 
+operations, and multi-platform support. 
+5. Scikit-Learn 
+ Description: A Python library for classical machine learning algorithms and 
+data preprocessing. 
+ Use Cases: Predictive analytics, clustering, and regression analysis. 
+ Key Features: Easy-to-use API, robust implementation of ML algorithms, and 
+excellent integration with NumPy and pandas. 
+6. NLTK (Natural Language Toolkit) 
+ Description: A Python library for NLP tasks, widely used in academic and 
+industrial research. 
+ Use Cases: Text tokenization, sentiment analysis, and speech tagging. 
+ Key Features: Extensive NLP datasets and tools, compatibility with Python, 
+and educational resources. 
+7. SpaCy 
+ Description: A Python-based library for advanced natural language processing. 
+ Use Cases: Named entity recognition, part-of-speech tagging, and dependency 
+parsing. 
+ Key Features: Fast, efficient, pretrained models for multiple languages, and 
+seamless integration with other AI tools. 
+8. GPT-3 (OpenAI) 
+ Description: A state-of-the-art language model for generating human-like text. 
+ Use Cases: Chatbots, content creation, summarization, and translation. 
+ Key Features: Extensive pretraining, high versatility, and the ability to generate 
+coherent and contextually relevant responses. 
+9. IBM Watson 
+ Description: A suite of AI services and tools by IBM, offering cloud-based AI 
+solutions. 
+ Use Cases: Virtual assistants, business analytics, and healthcare diagnostics. 
+ Key Features: Prebuilt APIs for NLP, computer vision, and speech recognition, 
+with enterprise-level security. 
+10. RapidMiner 
+ Description: A platform for data science and machine learning workflows, 
+targeting non-coders and experts alike. 
+ Use Cases: Data preprocessing, predictive modeling, and business analytics. 
+ Key Features: Drag-and-drop interface, end-to-end ML pipeline support, and 
+integration with multiple data sources. 
+_____________________________________________________________________
+
+Tutorial 1
+
+1. Import numpy library.
+import numpy as np
+2. Create 1D array with 5 elements.
+x = np.array([1,2,3,4,5])
+print(x)
+3. Create 1D array with 5 elements random value. (by default values between 0 to 1)
+x=np.random.rand(5)
+print(x)
+4. Generate random value from range 5 to 15 with 1D array size 10.
+x=np.random.randint(5,16,10)
+print(x)
+5. Create 2D array - 4 by 3 size.
+# x=np.array([[1,2,3],[1,2,3],[1,2,3],[1,2,3]])
+# print(x)
+x=np.random.randint(5,16,(4,3))
+print(x)
+6. Create 2D array with size 3 by 3. Elements values are random number(by default values between 0 to 1)
+x=np.random.rand(3,3)
+print(x)
+7. Generate random value from range 5 to 15 with 2D array size 3 by 3.
+x=np.random.randint(5,16,(3,3))
+print(x)
+8. Create 3D array with size 2 * 3 * 2.
+#x = np.array([[[1,2],[1,2],[1,2]],[[1,2],[1,2],[1,2]]])
+#print(x)
+x=np.random.randint(5,16,(2,3,2))
+print(x)
+9. Initialize 5 by 5 array with all values are zeros.
+# x=np.random.randint(0,1,(5,5))
+# print(x)
+x=np.zeros((5,5),dtype=int)
+print(x)
+10. Initialize 5 by 5 array with all values are ones.
+# x=np.random.randint(1,2,(5,5))
+# print(x)
+x=np.ones((5,5),dtype=int)
+print(x)
+11. Initialize 5 by 5 array with all values are particular values(consider 4).
+# x=np.random.randint(4,5,(5,5))
+# print(x)
+# x=np.random.randint(4,5,(5,5))
+# print(x)
+x=np.full((5,5),4)
+print(x)
+12. Create indentity matrix with all diagonal values are 1 and rest all values are zeros.
+x=np.eye(5,5,dtype=int)
+print(x)
+13. Find out shape of array.
+x.shape
+14. Find dimension of array.
+x.ndim
+15. Find no. of elements of from above any array.
+x.size
+16. Find type of array.
+x.dtype
+17. Find maximum value from array.
+# a=np.max(x)
+# print(a)
+a=np.max([1,2,3,4,5])
+print(a)
+18. Find minimum value from array.
+# x=np.min(x)
+# print(x)
+x=np.min([1,2,3,4,5])
+print(x)
+19. Find average (mean) values from array.
+a = np.array([1,2,3])
+b = a.mean()
+print(b)
+20. Find location of maximum value from array.
+# x = np.array([[[1,2],[1,2],[1,2]],[[1,2],[1,2],[1,2]]])  #2 * 3 * 2
+# print(x)
+a=np.argmax(x)
+print(a)
+21. Create two 2D array of size 3 by 3 and perform four basic mathematical operations.
+a = np.random.randint(1,6,(3,3))
+b = np.random.randint(1,6,(3,3))
+print(a)
+print(b)
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+22. Print index 2 and -2 value for 1D array. (indexing).
+a = np.array([1,2,3,4,5])
+print(a)
+print('second element',a[2])
+print('second last element',a[-2])
+23. Perform indexing operations with 2D array.
+# x = np.array([[1,2,3],[1,2,3],[1,2,3]])
+# print(x)
+b = x[2] = 10
+print(b)
+print(x)
+24. Print value of index 2 to 5 (slicing)
+x = np.array([10,20,30,40,50,60,70,80,90.100],dtype=int)
+print(x)
+b = x[2:6]
+print(b)
+25. Print from index 0 to 5 values
+b = x[0:6]
+print(b)
+26. Print from index 5 to all
+b = x[5:]
+print(b)
+27. Reassign value for particular index.
+c = x[0] = 100
+print(x)
+28.  Reassign value 100 to all elements.
+c = x[0:] = 100
+print(x)
+29. Extract elements from index 1 to 7 with a step of 2.
+x = np.array([1,2,3,4,5,6,7,8,9,10])
+b = x[1:8:2]
+print(b)
+30. Print Reverse the array.
+b = x[::-1]
+print(b)
+
+_____________________________________________________________________
+
+Tutorial 2
+
+Explore Pandas library to analyze  and manipulate data.
+Description: Use Pandas library for data analysis and manipulation.
+
+Dataset: Sample CSV file
+
+Task: Load the dataset, perform data cleaning, manipulation (like sorting, filtering), and exploratory data analysis.
+
+
+1. Import numpy and pandas library.
+import numpy as np
+import pandas as pd
+2. Define series with 3 elements.
+x = pd.Series([1,2,3])
+print(x)
+3. Define a series with a custom index.
+x1 = pd.Series([1,2,3,4,5],["A","B","C","D","E"])
+print(x1)
+4. Fetch Series value and index.
+print(x1.values)
+print(x1.index)
+5. Create DataFrame from list of Dict.
+data = [
+    {'Name':'abc','Age':20},
+    {'Name':'def','Age':21},
+    {'Name':'ghi','Age':22}
+]
+data
+6. Create sample excel file in your computer and upload it to drive. Read the excel file in colab.
+pip install openpyxl
+x2 = pd.read_excel("Student.xlsx")
+x2
+7. Explore Kaggle: Your Machine Learning and Data Science Community and UCI Machine Learning Repository for a dataset. Search iris dataset and download.
+8. Read iris dataset from csv file format and findout no. of rows and columns.
+x3 = pd.read_csv('iris.csv')
+x3
+9. Perform the following operation on the iris dataset.
+    a. Fetch the first 5 and last 5 rows.
+    x3.head()
+    b. Find index.
+    x3.index
+    c. Find column name and rename it with SepalLengthCm':'Sepal_Length','SepalWidthCm':'Sepal_Width','PetalLengthCm':'Petal_Length','PetalWidthCm':'Petal_Width'
+    # x3.columns
+    x3=x3.rename(columns={'Sepal.Length':'Sepal_length','Sepal.Width':'Sepal_Width','Petal.Length':'Petal_Length','Petal.Width':'Petal_Width'})
+    x3
+    #find the categories
+    categories = x3['Species'].unique()
+    print(categories)
+    d. replace "Iris-versicolor" with "versicolor", same way do for rest 2 categories.
+    x3.replace("Iris-versicolor","versicolor",inplace=True)
+    x3.replace("Iris-setosa","setosa",inplace=True)
+    x3.replace("Iris-virginica","virginica",inplace=True)
+    categories
+    e. Find Statistical description.
+    x3.describe()
+    f. extract specific column.
+    x3[['Id','Sepal_length']].head(3)
+    g. add new column with condition.
+    def yes_no(Sepal_length):
+    return 'YES' if Sepal_length >= 5 else "No"
+    x3['Result'] = x3['Sepal_length'].apply(yes_no)
+    x3
+    h. drop added column.
+    # x3.drop('Result',axis=1,inplace=True)
+    x3
+    i. select first row data.
+    x3.iloc[0]
+    j. select 51 to 55 rows
+    x3.iloc[51:56]
+    k. Apply conditional formatting.
+    x3[x3['Petal_Length']>5]
+    # x3[x3['Species'] == 'virginica'].count()
+    l. print "virginica" with "Petal_Length" more than 6.
+    x3[(x3['Petal_Length']>6) & (x3['Species'] == 'virginica')]
+    m. find duplicate values.
+    x3.duplicated()
+    # x3.duplicated().sum()
+    n. Find basic information.
+    x3.info()
+    o. Find null value in dataset.
+    x3.isna()
+    # x3.isna().sum()
+10. Download student_info dataset. Find null value from it. And fill null value using mean of that column.
+Dataset Link: https://drive.google.com/drive/folders/1xTZizwH2onTZ8KpW1gttiFZ8SrY8RKOt?usp=sharing
+std = pd.read_csv('student_info.csv')
+std
+# find the null values and fill it
+std['study_hours'] = std['study_hours'].fillna(std['study_hours'].mean())
+std.isna().sum()
+11. Import adult data set from UCIML Adult - UCI Machine Learning Repository. And perform following task.
+    a. Find missing value. Find type of missing data.
+    #   pip install ucimlrepo
+    from ucimlrepo import fetch_ucirepo
+    #fetch the dataset
+    adult = fetch_ucirepo(id=2)
+    #data
+    X = adult.data.features
+    y = adult.data.targets
+    print(adult.metadata)
+    #variable information
+    print(adult.variables)
+    b. Handle missing value.
+    X.isna().sum()
+    # X['workclass'].unique()
+    cat = X['workclass'].unique()
+    print(cat)
+    X['workclass'].mode()  #The mode is a statistical measure that represents the most frequently occurring value in a dataset.
+    X['workclass'].fillna(X['workclass'].mode()[0],inplace=True)
+    X.isna().sum()
+
+    X['occupation'].unique()
+    X['occupation'].mode()
+    X['occupation'].fillna(X['occupation'].mode()[0], inplace=True)
+    X.isna().sum()
+    
+    X['native-country'].unique()
+    X['native-country'].mode()
+    X['native-country'].fillna(X['native-country'].mode()[0],inplace=True)
+    X.isna().sum()
+_____________________________________________________________________
+
+
+Tutorial 3 
+
+Visualize Data Using Matplotlib and Seaborn Library
+Description: Create visualizations with Matplotlib and Seaborn. 
+
+Dataset: Clean_Dataset 
+
+Task: Create various plots (e.g., histograms, scatter plots, box plots) to visualize the data.
+
+1. Import numpy, pandas, seaborn and matplotlib library.
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+2. Download data set from kaggle : Flight Price Prediction (kaggle.com)
+3. Read dataset “Clean_Dataset”.
+cd = pd.read_csv("Clean_Dataset.csv")
+cd
+4. Find Out columns.
+cd.columns
+5. Rename columns Unnamed: 0'  to 'id'.
+cd = cd.rename(columns={'Unnamed: 0':'id'})
+cd.columns
+6. Are there any null values in the dataset?
+cd.isna().sum()
+7. Find categories of ‘source_city’. (categorical data)
+cd['source_city'].unique()
+8. Find categories of ‘class’. (categorical data)
+cd['class'].unique()
+9. Draw Count plot for ‘source_city’.
+sns.countplot(y='source_city',data=cd)
+10. Draw Count plot for ‘class’.
+sns.countplot(x='class',data=cd)
+11. Draw a pie plot for ‘source_city’.
+cd['source_city'].value_counts().plot(kind='pie',autopct='%.2f')
+12. Draw Donut plot for ‘source_city’.
+plt.pie(cd['source_city'].value_counts(),labels=cd['source_city'].unique(),autopct='%.2f',wedgeprops=dict(width=0.4))
+13. Draw Histogram plot for ‘price’.
+plt.hist(cd['price'])
+14. Draw Distplot for ‘price’
+sns.distplot(cd['price'])
+
+
+___________________________________________________________________________
+
+Tutorial 4
+
+Implement Simple Linear Regression
+
+Use the computers.csv dataset and perform the following activities:
+Dataset contains the details of time taken to repair a computer, given the number of units to be repaired.
+Dataset: Download from drive link
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    %matplotlib inline
+    cm = pd.read_csv('computers.csv')
+    cm
+    #Feature Engineering
+    Step 1: Find the mean
+    mean_value = cm['Minutes'].mean()
+    print(mean_value)
+    Step 2: Plot into graph
+    plt.scatter(cm['Units'], cm['Minutes'], color='blue', marker='o')
+    plt.axhline(y=mean_value, c='r')
+    plt.xlabel('Units')
+    plt.ylabel('Minutes')
+    Step - 3. Creating three Linear Regression Models
+    - model 0 - set mean value
+    - model 1 - 10 + (12 * Units)
+    - model 2 - 6 + (18 * Units)
+    plt.scatter(cm['Units'], cm['Minutes'], color='blue', marker='o')
+    plt.axhline(y=mean_value, c='r')
+    plt.xlabel('Units')
+    plt.ylabel('Minutes')
+    #Creating three Linear Regression Models
+    minutes_model0 = cm['Minutes'].mean()
+    minutes_model1 = 10 + 12*cm['Units']
+    minutes_model2 = 6 + 18*cm['Units']
+    Step - 4. Add model0, model1, model2 columns to dataset
+    cm['min_model0'] = minutes_model0
+    cm['min_model1'] = minutes_model1
+    cm['min_model2'] = minutes_model2
+    cm
+    Step - 5. Create a sub plot.
+    fig, ax = plt.subplots()
+
+    #plotting the actual 'Minutes'
+    ax.scatter(x="Units", y="Minutes", data=computers, label='Actual repair time')
+
+    #plotting the model 0 predictions
+    ax.plot(computers['Units'], computers['min_model0'], color='red', label='model0')
+
+    #plotting the model 1 predictions
+    ax.plot(computers['Units'], computers['min_model1'], color='green', label='model1')
+
+    #plotting the model 2 predictions
+    ax.plot(computers['Units'], computers['min_model2'], color='black', label='model2')
+
+    #Adding xlabel, ylabel, title and legend
+    ax.set_ylabel('Minutes')
+    ax.set_xlabel('Units')
+    ax.set_title('Speculated Models')
+    ax.legend()
+
+    Step 6. Do a linear regression
+    - set X(input)=Unites and y(output)=Minutes
+    - importing a reqierd class
+    - creating a linear regression model
+    - fitting the model
+    - fetch intercept and coefficient
+
+1. Build Regression model using Scikit-Learn Library(Model 3).
+    a. Set the 'Units' column as the input data or predictor column
+    X = cm[['Units']]
+    b. Set the 'Minutes' column as the output data
+    y = cm['Minutes']
+    c. Importing the required class -  LinearRegression
+    from sklearn.linear_model import LinearRegression
+    d. Creating a linear regression model
+    model = LinearRegression()
+    e. Fitting the model to the data
+    model.fit(X, y)
+    f. Fetching intercept and coefficient
+    print("Intercept: ", model.intercept_)
+    print("Coefficient: ", model.coef_)
+2. Creating Linear Regression model with calculated coefficient and intercept.
+3. Add the above model to the dataframe for Visualization.
+minutes_model3 = model.intercept_ + model.coef_*cm['Units']
+cm['min_model3'] = minutes_model3
+cm
+4. Visualize Models using pyplot.
+fig, ax = plt.subplots()
+
+#plotting the actual 'Minutes'
+ax.scatter(x="Units", y="Minutes", data=cm, label='Actual repair time')
+
+#plotting the model 0 predictions
+ax.plot(cm['Units'], cm['min_model0'], color='red', label='model0')
+
+#plotting the model 1 predictions
+ax.plot(cm['Units'], cm['min_model1'], color='green', label='model1')
+
+#plotting the model 2 predictions
+ax.plot(cm['Units'], cm['min_model2'], color='black', label='model2')
+
+#plotting the model 3 predictions
+ax.plot(cm['Units'], cm['min_model3'], color='yellow', label='model3')
+
+#Adding xlabel, ylabel, title and legend
+ax.set_ylabel('Minutes')
+ax.set_xlabel('Units')
+ax.set_title('Speculated Models')
+ax.legend()
+5. Compute the Coefficient of Determination to find accuracy.
+Rsq = model.score(computers[['Units']], y)
+Rsq
+
+__________________________________________________________________
+
+Tutorial 5
+
+Multiple Linear Regression Model
+
+std_marks_data.csv
+
+To understand Multiple Linear Regression, let us consider the student marks dataset.
+
+This model helps us to predict the marks of the students using the previous dataset.
+The inputs are hours(time spent to study) ,age(present age) and internet(weather the internet is available or not), by using these 3 input fields we are predicting the marks of the students.
+1. Observe data and do some preprocessing.
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+marks = pd.read_csv('std_marks_data.csv')
+marks
+marks.info()
+2. Find no. of missing values.
+marks.isna().sum()
+3. Fill mean value in place of NaN value so NaN value does not affect accuracy.
+marks.hours = marks.hours.fillna(marks.hours.mean())
+marks.isna().sum()
+4. Segregate input and output.
+X = marks.iloc[:,:-1]
+X
+y = marks.iloc[:,-1]
+y
+5. Prepare model.
+from sklearn.linear_model import LinearRegression
+model = LinearRegression()
+model.fit(X,Y)
+print('Intercept = ',model.intercept_)
+print('Coefficients = ',model.coef_)
+6. Test model with new input data.
+hours = int(input("Enter study hours: "))
+age = int(input("Enter age: "))
+internet = int(input("Enter internet usage: "))
+print(hours)
+print(age)
+print(internet)
+new_input = pd.DataFrame({'hours':[hours],'age':[age],'internet':[internet]})
+print(new_input)
+new_output = model.predict(new_input)
+print(new_output)
+print("Predicted Marks = ",new_output[0])
+
+______________________________________________________________________________
+
+
+Tutorial 6
+
+Build Logistic Regression Model
+Consider a coronary heart disease dataset (chd_data.csv) which lists the age in years ('age') and the presence/absence of evidence of significant coronary heart disease ('chd') for 100 patients.
+The variable chd = 0 indicates the absence of coronary heart disease, whereas chd=1 indicates the presence of coronary heart disease.
+
+1. Import dataset and visualize the data to get an insight on building the model.
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+chd_data = pd.read_csv('chd_data.csv')
+chd_data
+2. Importing the required class
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+3. Specifying the columns as predictor and target variable
+# Visualize the data using a scatter plot
+plt.scatter(chd_data['age'], chd_data['chd'])
+plt.xlabel('Age')
+plt.ylabel('Presence of CHD')
+plt.title('Scatter Plot of Age vs. CHD')
+plt.show()
+X = chd_data[['age']]  # Predictor variable (age)
+y = chd_data['chd']   # Target variable (chd)
+4. Split the data in training and test set in 70:30 ratio.
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+5. Built model using sklearn.linear_model.LogisticRegression class.
+# Build the logistic regression model
+model = LogisticRegression()
+6. Train the model using the training data.
+# Train the model using the training data
+model.fit(X_train, y_train)
+7. Fetch the intercept and the coefficients of the model.
+intercept = model.intercept_
+coefficients = model.coef_
+print("Intercept:", intercept)
+print("Coefficients:", coefficients)
+8. Creating sample data.
+sample_data = pd.DataFrame({'age': [45, 55, 65]})
+9. Predicting the probabilities for each of the class labels.
+probabilities = model.predict_proba(sample_data)
+print("Predicted Probabilities:\n", probabilities)
+10. Evaluate the model's performance on training and test data using 'accuracy' measure.
+# Evaluate the model's performance on training and test data
+y_train_pred = model.predict(X_train)
+y_test_pred = model.predict(X_test)
+train_accuracy = accuracy_score(y_train, y_train_pred)
+test_accuracy = accuracy_score(y_test, y_test_pred)
+print("Train Accuracy:", train_accuracy)
+print("Test Accuracy:", test_accuracy)
+
+______________________________________________________________________________________
+
+
+Tutorial 7 
+
+K-Nearest Neighbor
+
+Let us implement the algorithm with the help of the 'Mobile.csv' dataset.
+It contains data about customers “Age”, “EstimatedSalary”, “Purchased” .
+Download the dataset from the shared folder.
+
+
+Predict if the customer will purchase a mobile or not.
+
+1. Load data : mobile.csv
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, classification_report
+df = pd.read_csv('mobile.csv')
+df
+2. Look inside the dataset by finding information.
+print("Dataset Information:")
+print(df.info())  # Display information about the DataFrame (data types, non-null counts, etc.)
+print("\nFirst 5 rows of the dataset:")
+print(df.head())  # Display the first 5 rows of the DataFrame
+print("\nDescriptive statistics:")
+print(df.describe()) # Display statistical summary of numerical columns
+print("\nUnique values in Purchased column:")
+print(df['Purchased'].unique()) # Display unique values of the target variable
+3. Draw scatter plot of purchased and not_purchased value with respect to Age and EstimatedSalary.
+plt.figure(figsize=(12, 5))
+
+plt.subplot(1, 2, 1) # Create the first subplot
+purchased = df[df['Purchased'] == 1] # Filter rows where 'Purchased' is 1
+not_purchased = df[df['Purchased'] == 0] # Filter rows where 'Purchased' is 0
+plt.scatter(purchased['Age'], purchased['EstimatedSalary'], color='green', label='Purchased') # Scatter plot for purchased data
+plt.scatter(not_purchased['Age'], not_purchased['EstimatedSalary'], color='red', label='Not Purchased') # Scatter plot for not purchased data
+plt.title('Age vs EstimatedSalary (Purchased)') # Set the title of the plot
+plt.xlabel('Age') # Set the x-axis label
+plt.ylabel('EstimatedSalary') # Set the y-axis label
+plt.legend() # Display the legend
+
+plt.subplot(1,2,2) # Create the second subplot
+plt.scatter(purchased['Age'], purchased['Purchased'], color='green', label='Purchased') # Scatter plot of age vs purchase
+plt.scatter(not_purchased['Age'], not_purchased['Purchased'], color='red', label='Not Purchased') # Scatter plot of age vs purchase
+plt.title('Age vs Purchased') # Set the title
+plt.xlabel('Age') # Set the x label
+plt.ylabel('Purchased') # Set the y label
+plt.legend() # Display the legend
+
+plt.show() # Show the plots
+4. Do Feature engineering (normalize the Age and EstimatedSalary columns)
+scaler = StandardScaler() # Initialize StandardScaler
+df[['Age', 'EstimatedSalary']] = scaler.fit_transform(df[['Age', 'EstimatedSalary']])
+X = df[['Age', 'EstimatedSalary']] # Features
+y = df['Purchased'] # Target variable
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+5. Split the dataset into train and test data
+k_values = [3, 5, 7] # Define the values of k to test
+train_accuracies = {} # Dictionary to store training accuracies
+test_accuracies = {} # Dictionary to store testing accuracies
+
+6. Build the kNN model with k=5,k=3,k=7.
+for k in k_values:
+    knn = KNeighborsClassifier(n_neighbors=k) # Initialize KNeighborsClassifier with k neighbors
+    knn.fit(X_train, y_train) # Train the model
+
+    # Evaluate on the training set
+    y_train_pred = knn.predict(X_train) # Predict on the training set
+    train_accuracy = accuracy_score(y_train, y_train_pred) # Calculate training accuracy
+    train_accuracies[k] = train_accuracy # Store training accuracy
+
+    # Evaluate on the test set
+    y_test_pred = knn.predict(X_test) # Predict on the test set
+    test_accuracy = accuracy_score(y_test, y_test_pred) # Calculate testing accuracy
+    test_accuracies[k] = test_accuracy # Store testing accuracy
+
+    print(f"\nResults for k={k}:")
+    print(f"  Train Accuracy: {train_accuracy:.4f}")
+    print(f"  Test Accuracy: {test_accuracy:.4f}")
+    print(f"  Classification Report:\n{classification_report(y_test, y_test_pred)}")
+
+7. Evaluate model performance on train and test sets with different value of k.
+print("\nSummary of Train Accuracies:")
+for k, accuracy in train_accuracies.items():
+    print(f"  k={k}: {accuracy:.4f}") # Print training accuracies for each k
+
+print("\nSummary of Test Accuracies:")
+for k, accuracy in test_accuracies.items():
+    print(f"  k={k}: {accuracy:.4f}")
+______________________________________________________________________________________
+
+
+Tutorial 8 
+
+SVM for classification
+
+Consider the Iris dataset which provides measurements of sepal length, sepal width, petal length, and petal width for 50 flowers from each of 3 species. Total rows are 150.
+
+1. Create Binary Class SVM model
+    1. Reading input from csv file (iris.csv)
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    df = pd.read_csv('Iris.csv')
+    df
+    2. Do Feature Engineering
+    v_nv_fn = lambda x: 0 if x=="Iris-versicolor" else 1
+    3. Create a new column in the dataframe (v_nv), that distinguishes the species - 'versicolor'(marked by 0) from rest.
+    df["v_nv"] = df["Species"].apply(v_nv_fn)
+    df
+    4. Build Model
+    sns.pairplot(df,
+             x_vars = "PetalLengthCm",
+             y_vars="PetalWidthCm",
+             hue="v_nv",height=5)
+    5. Visualize Model using mlxtend
+    from sklearn.svm import SVC
+    X=df[["PetalLengthCm","PetalWidthCm"]]
+    y=df["v_nv"]
+    model=SVC()
+    model.fit(X,y)
+    model.score(X,y)
+
+2. Create Multi Class SVM model
+    1. Reading input from csv file (iris.csv)
+    pip install mlxtend
+    df = pd.read_csv('Iris.csv')
+    df
+    from mlxtend.plotting import plot_decision_regions
+    plt.title('Decision boundary of SVM on iris data')
+    2. Do Feature Engineering
+    features = np.array(X)
+    target = np.array(y)
+    plot_decision_regions(features,target,clf=model)
+    plt.xlabel("PetalLengthCm")
+    plt.ylabel("PetalWidthCm")
+    df.Species = df.Species.astype(object)
+    3. Encode the species column with numerical values. And replace label 'setosa' with '0', 'versicolor' with '1' and 'virginica' with '2'.
+    df.loc[df.Species=="Iris-setosa","Species"]= 0
+    df.loc[df.Species=="Iris-versicolor","Species"]= 1
+    df.loc[df.Species=="Iris-virginica","Species"]= 2
+    df.Species=df.Species.astype("category")
+    df
+    4. Build Multiclass Model using SVM
+    X=df[['PetalLengthCm','PetalWidthCm']]
+    y=df["Species"]
+    model=SVC()
+    model.fit(X,y)
+    model.score(X,y)
+    5. Visualize Model using mlxtend
+    from mlxtend.plotting import plot_decision_regions
+    features = np.array(X)
+    target = np.array(y)
+    plot_decision_regions(features,target,clf=model)
+    plt.xlabel("PetalLengthCm")
+    plt.ylabel("PetalWidthCm")
+    plt.title('Multiclass classification on iris using SVM')
+______________________________________________________________________________________
+
+
+Tutorial 9 
+
+Decision Tree
+
+1. Load dataset users.csv
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+user = pd.read_csv('users.csv')
+user
+2. Assign predictors and targets.
+X=user.columns.drop('Purchased')
+y=user['Purchased']
+3. Apply encoding using get_dummies().
+user_encoded = pd.get_dummies(user[X]).astype(int)
+user_encoded
+4. Split the dataset into train and test data.
+from sklearn.model_selection import train_test_split
+X_train,X_test,y_train,y_test = train_test_split(user_encoded, y, test_size=0.15, random_state=0)
+5. Building the model using a decision tree.
+from sklearn.tree import DecisionTreeClassifier
+model = DecisionTreeClassifier(criterion='entropy',random_state=1)
+model.fit(X_train,y_train)
+train_predictions = model.predict(X_train)
+test_predictions = model.predict(X_test)
+6. Draw decision tree.
+from sklearn.tree import plot_tree
+#Plot the decision tree
+plt.figure(figsize=(20,20))
+plot_tree(
+    model,
+    filled=True,
+    rounded=True,
+    fontsize=12,
+    feature_names=user_encoded.columns,
+    class_names=['Not Purchased','Purchased']
+)
+plt.title("Decision Tree Visualization")
+plt.show()
+7. Evaluate model performance on train and test setosa#accuracy score
+from sklearn.metrics import accuracy_score
+y_pred_test = model.predict(X_test)
+accuracy_score(y_test, y_pred_test)
+# Train set performance
+y_pred_train = model.predict(X_train)
+print("Train Accuracy:", accuracy_score(y_train, y_pred_train))
+# Test set performance
+print("Test Accuracy:", accuracy_score(y_test, y_pred_test))
+
+______________________________________________________________________________________
+
+Tutorial 10 
+
+Ensemble Learning
+
+1. we are going to work on spambase dataset, where the normalized frequency of different words in an email are recorded, based on which an email is labeled as spam (1) or not spam (0)
+#importing required libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+import seaborn as sns
+import warnings
+warnings.filterwarnings("ignore")
+2. Read dataset “spambase.csv”.
+#reading input CSV file
+spam_data=pd.read_csv('spambase.csv')
+3. Split the data into a train and test set.
+#split the dataset into features and target
+features=spam_data.columns.drop('spam')
+target='spam'
+X = spam_data.iloc[:,:-1]
+Y = spam_data.iloc[:,-1]
+X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.2,random_state=100)
+4. Implement Bagging using Random Forest Algorithm.
+#Method 1: Train Random Forest (Bagging)
+from sklearn.ensemble import RandomForestClassifier
+model = RandomForestClassifier(n_estimators=10, min_samples_split=20, min_impurity_decrease=0.05)
+model.fit(X_train, Y_train)
+train_accuracy = model.score(X_train, Y_train)
+test_accuracy = model.score(X_test, Y_test)
+print(train_accuracy,test_accuracy)
+5. Implement Boosting using Adaboost Algorithm.
+# Method 2: Boosting using Adaboost Algorithm
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import AdaBoostClassifier
+model = AdaBoostClassifier(n_estimators=10)
+model.fit(X_train, Y_train)
+train_accuracy = model.score(X_train, Y_train)
+test_accuracy = model.score(X_test, Y_test)
+print(train_accuracy, test_accuracy)
+
+#Evaluate the AdaBoost model using accuracy and classification report
+Y_pred = model.predict(X_test)
+accuracy = accuracy_score(Y_test, Y_pred)
+report = classification_report(Y_test, Y_pred)
+print("Accuracy:", accuracy)
+print(report)
+
+______________________________________________________________________________________
+
+Tutorial 11 
+
+Naive Bayes classification
+
+1. Download and read dataset iris.csv.
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt 
+iris = pd.read_csv("Iris.csv")
+2. Import necessary files to implement Gaussian Naive Bayes classification.
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import classification_report, confusion_matrix
+3. Perform Label encoding with required columns.
+X = iris.iloc[:, :-1]  
+y = iris.iloc[:, -1]  
+4. Implement Gaussian Naive Bayes classification.
+y = y.astype('category').cat.codes
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+model = GaussianNB()
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test) 
+5. Print confusion matrix and classification report.
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred)) 
+conf_matrix = confusion_matrix(y_test, y_pred)
+
+sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues')
+
+plt.title("Confusion Matrix (Local Iris Dataset)")
+
+plt.xlabel("Predicted")
+
+plt.ylabel("Actual")
+
+plt.show()
