@@ -881,3 +881,189 @@ plt.xlabel("Predicted")
 plt.ylabel("Actual")
 
 plt.show()
+
+______________________________________________________________________________________
+
+
+Tutorial 12 Implement kmeans clustering
+
+
+Read dataset iris from sklearn online dataset.
+2.1 Implement kmeans clusterting using sklearn with ELBOW method.
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.cluster import KMeans
+from sklearn.datasets import load_iris
+from sklearn.preprocessing import StandardScaler
+iris = load_iris()
+dt = pd.DataFrame(iris.data, columns=iris.feature_names)
+dt.columns
+X = dt[['sepal length (cm)', 'sepal width (cm)']].values
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+# ELBOW METHOD to determine optimal k
+wcss = []  # Within-cluster sum of squares
+K = range(1, 11)
+for k in K:
+    kmeans = KMeans(n_clusters=k, init='k-means++', random_state=42)
+    kmeans.fit(X_scaled)
+    wcss.append(kmeans.inertia_)  # Append WCSS value
+plt.figure(figsize=(8, 6))
+plt.plot(K, wcss, marker='o', linestyle='-', color='b')
+plt.xlabel('Number of Clusters (k)')
+plt.ylabel('WCSS (Within-Cluster Sum of Squares)')
+plt.title('Elbow Method for Optimal k')
+plt.show()
+kmeans = KMeans(n_clusters=3, init='k-means++', random_state=42)
+y_kmeans = kmeans.fit_predict(X_scaled)
+plt.figure(figsize=(8,6))
+sns.scatterplot(x=X_scaled[:, 0], y=X_scaled[:, 1], hue=y_kmeans, palette='viridis')
+plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], 
+            s=300, c='red', marker='X', label='Centroids')
+plt.xlabel('Sepal Length (Standardized)')
+plt.ylabel('Sepal Width (Standardized)')
+plt.title('K-Means Clustering of Iris Dataset')
+plt.legend()
+plt.show()
+
+2.1 Implement kmeans clusterting using sklearn without ELBOW method.
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.cluster import KMeans
+from sklearn.datasets import load_iris
+from sklearn.preprocessing import StandardScaler
+iris = load_iris()
+dt = pd.DataFrame(iris.data, columns=iris.feature_names)
+dt.columns
+X = dt[['sepal length (cm)','sepal width (cm)']].values
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+kmeans = KMeans(n_clusters=3, init='k-means++', random_state=42)
+y_kmeans = kmeans.fit_predict(X_scaled)
+plt.figure(figsize=(8,6))
+sns.scatterplot(x=X_scaled[:, 0], y=X_scaled[:, 1], hue=y_kmeans, palette='viridis')
+plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=300, c='red', marker='X', label='Centroids')
+plt.xlabel('Sepal Length (Standardized)')
+plt.ylabel('Sepal Width (Standardized)')
+plt.title('K-Means Clustering of Iris Dataset (k=3)')
+plt.legend()
+plt.show()
+
+3. Implement kmeans clustering using pyclustering.
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from pyclustering.cluster.kmeans import kmeans
+from pyclustering.utils import distance_metric, type_metric
+from sklearn import datasets
+from sklearn.preprocessing import StandardScaler
+wine = datasets.load_wine()
+wine_df = pd.DataFrame(wine.data, columns=wine.feature_names)
+wine_df.info()
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(wine.data)
+#convert the numpy array to list of lists
+X_scaled_list = X_scaled.tolist() 
+k = 3
+initial_centroids = np.random.choice(len(X_scaled_list), k, replace=False)
+#Covert the numpy array index values into actual data points
+initial_centroids_points = [X_scaled_list[i] for i in initial_centroids]
+metric = distance_metric(type_metric.EUCLIDEAN)
+kmeans_instance = kmeans(X_scaled_list, initial_centroids_points)
+kmeans_instance.process()
+clusters = kmeans_instance.get_clusters()
+centroids = kmeans_instance.get_centers()
+cluster_labels = np.zeros(len(X_scaled_list))
+for cluster_id, cluster in enumerate(clusters):
+    for index in cluster:
+        cluster_labels[index] = cluster_id
+plt.figure(figsize=(8,6))
+plt.scatter(X_scaled[:,0], X_scaled[:,1],c=cluster_labels,cmap='viridis',marker='o')
+for centroid in centroids:
+    plt.scatter(centroid[0],centroid[1],s=200,c='red',marker='X',label='Centroid')
+plt.title("K-Means Clustering (Wine Dataset) with PyClustering")
+plt.legend()
+plt.show()
+
+______________________________________________________________________________________
+
+Tutorial 13 Implement K-Medoids clustering on iris dataset using pyclustering.
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from pyclustering.cluster.kmedoids import kmedoids
+from pyclustering.utils import distance_metric, type_metric
+from sklearn import datasets
+from sklearn.preprocessing import StandardScaler
+wine = datasets.load_wine()
+wine_df = pd.DataFrame(wine.data, columns=wine.feature_names)
+wine_df.info()
+print(wine_df)
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(wine.data)
+import random
+initial_medoids = random.sample(range(len(X_scaled)),3)
+metric = distance_metric(type_metric.EUCLIDEAN)
+kmedoids_instance = kmedoids(X_scaled, initial_medoids, metric=metric)
+kmedoids_instance.process()
+clusters = kmedoids_instance.get_clusters()
+medoids = kmedoids_instance.get_medoids()
+plt.figure(figsize=(8,6))
+for cluster in clusters:
+    plt.scatter(X_scaled[cluster, 0], X_scaled[cluster, 1], label=f'Cluster {clusters.index(cluster)}')
+
+#Mark the medoids in red
+for medoid in medoids:
+    plt.scatter(X_scaled[medoid, 0], X_scaled[medoid, 1],s=200,c='red',marker='X',label='Medoid')
+plt.title("K-Medoids Clustering (Wine Dataset) with PyClustering")
+plt.legend()
+plt.show()
+______________________________________________________________________________________
+
+Tutorial 14 Implement PCA on given matrix.
+
+
+Implement PCA on given matrix.
+import numpy as np
+#step 1: collect data
+
+X=np.array([
+    [2,3,4],
+    [3,5,6],
+    [5,8,9],
+    [6,9,11],
+    [7,10,13]
+])
+#step 2: compute mean value for each column
+mean_X=np.mean(X,axis=0)
+print(mean_X)
+#step 3: center the data
+X_centered=X - mean_X
+print(X_centered)
+#step 4: compute the covariance matrix
+cov_matrix = np.cov(X_centered,rowvar=False)
+print(cov_matrix)
+#step 5: compute eighenvalues and eigenvector
+eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
+print(eigenvalues)
+print(eigenvectors)
+# Step 6: Select Principal Components (Sorting by largest eigenvalues)
+sorted_indices = np.argsort(eigenvalues)[::-1]
+eigenvalues = eigenvalues[sorted_indices]
+eigenvectors = eigenvectors[:, sorted_indices]
+# Step 7: Transform the Data
+# 3 to 1 (Project onto first principal component)
+X_transformed_1 = X_centered @ eigenvectors[:, 0]
+# 3 to 2 (Project onto first two principal components)
+X_transformed_2 = X_centered @ eigenvectors[:, :2]
+# Output results
+print("Transformed Data (3 to 1):")
+print(X_transformed_1)
+print("\nTransformed Data (3 to 2):")
+print(X_transformed_2)
+
