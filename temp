@@ -1067,3 +1067,1981 @@ print(X_transformed_1)
 print("\nTransformed Data (3 to 2):")
 print(X_transformed_2)
 
+
+
+
+
+
+
+
+
+
+
+
+
+Theory
+Artificial Intelligence
+
+ Books
+– Artificial Intelligence, Third Edition, Tata-Mc Graw
+Hill Author(s): E.Rich & K. Knight (text book)
+– Artificial Intelligence – A New Synthesis Author(s):
+Nils J. Nilsson, Tom M Mitchell by Kaufmann
+Publishers.
+
+Unit 1
+Prepared by: Chhaya Patel 2
+
+Unit 1
+Introduction to Artificial
+Intelligence
+
+ Definition of an AI
+– AI is subset of Data Science.
+– Data science works with statistics, probability and
+linear algebra.
+– Artificial = man-made
+– Intelligence = thinking power
+– AI = a man-made thinking power
+
+Unit 1
+Prepared by: Chhaya Patel 3
+
+Artificial Intelligence
+
+ Definition of an AI
+
+Unit 1
+Prepared by: Chhaya Patel 4
+
+Definition of an AI
+
+– “AI is a branch of computer science by which we
+can create intelligent machines which can behave like
+a human, think like humans, and able to make
+decisions.”
+OR
+– AI is the simulation of human intelligence processes
+by machines, especially computer systems.
+
+Unit 1
+Prepared by: Chhaya Patel 5
+
+Characteristics of AI
+
+– AI make a machine to acquire information from
+experiences.
+– AI makes machine to operate humans-like-activities.
+– Capable of predicting and adapting.
+– Makes decisions on its own.
+– AI continuous learning.
+
+Unit 1
+Prepared by: Chhaya Patel 6
+
+Advantages of AI
+
+– Reduction in human error
+– Available 24×7
+– Helps in repetitive work
+– Digital assistance
+– Faster decisions
+– Medical applications
+– Improves Security
+– Efficient Communication etc..
+
+Unit 1
+Prepared by: Chhaya Patel 7
+
+Major area of AI
+
+Unit 1
+Prepared by: Chhaya Patel 8
+
+1. Expert Systems
+
+– An expert system is AI software that uses knowledge
+stored in a knowledge base.
+– Knowledge Engineering is the term used to define the
+process of building an Expert System.
+– For example, the expert system provides
+suggestions for spelling and errors in Google
+Search Engine.
+
+–
+
+Unit 1
+Prepared by: Chhaya Patel 9
+
+1. Expert Systems
+
+– It is mainly used in the medical field to operate
+medical facilities and detect virus infections.
+– It is also used in the banking sector for loan and
+investment analysis.
+– Example:
+• Dendral
+• Mycin
+• CaDet
+• DXplain
+
+Unit 1
+Prepared by: Chhaya Patel 10
+
+2. Robotics
+
+– Robotics is an interdisciplinary field of science and
+engineering incorporated with mechanical
+engineering, electrical engineering, computer
+science, and many others.
+– It deals with computer systems for their control,
+intelligent outcomes, and information transformation.
+– Robot can perform like humans, if enabled with AI.
+– Example: Sophia,
+
+Unit 1
+Prepared by: Chhaya Patel 11
+
+3. Machine Learning
+
+– Machine learning (ML) is a type of AI that allows
+software applications to become more accurate at
+predicting outcomes without being explicitly
+programmed to do so.
+
+– Machine learning algorithms use historical data as input
+to predict new output values.
+
+Unit 1
+Prepared by: Chhaya Patel 12
+
+3. Machine Learning
+
+– There are three major categories of Machine Learning:
+ Supervised Learning
+ Model trained with labelled dataset.
+ Classification - Classification is the process of
+categorizing a given set of data into classes.
+ Regression - model the relationship between a
+dependent (output) and independent (input)
+variables with one or more independent variables.
+
+Unit 1
+Prepared by: Chhaya Patel 13
+
+3. Machine Learning
+
+– There are three major categories of Machine Learning:
+ Un supervised Learning
+ Models are trained using unlabelled dataset and are
+allowed to act on that data without any supervision.
+ Clustering: identify and group similar data points
+in larger datasets without concern for the specific
+outcome.
+
+Unit 1
+Prepared by: Chhaya Patel 14
+
+3. Machine Learning
+
+– There are three major categories of Machine Learning:
+ Semi supervised Learning
+ learn from a small amount of labeled data and train
+model for large amount of unlabeled.
+
+Unit 1
+Prepared by: Chhaya Patel 15
+
+4. Neural Network / Deep Learning
+
+– Deep Learning is a type of machine learning based on
+artificial neural networks in which multiple layers of
+processing are used to extract higher level features
+from data.
+
+– This wonderful branch of AI is also responsible for
+virtual assistant apps such as “Alexa and Siri”.
+
+Unit 1
+Prepared by: Chhaya Patel 16
+
+4. Neural Network / Deep Learning
+
+– ANN – used to solve numerical problems.
+– CNN – used to solve problems with images.
+– RNN – used to solve problem with time series.
+
+Unit 1
+Prepared by: Chhaya Patel 17
+
+5. Fuzzy Logic
+
+– Fuzzy Logic Systems (FLS) produce acceptable but
+definite output in response to incomplete, ambiguous,
+or inaccurate (fuzzy) input.
+– Fuzzy Logic helps to offer a certain level of reasoning
+flexibility when faced with uncertainties.
+– Applications: Automatic Gearboxes, Four-Wheel
+Steering, Vehicle environment control, Microwave
+Ovens, Refrigerators, Toasters etc.
+
+Unit 1
+Prepared by: Chhaya Patel 18
+
+6. Natural Language Processing
+
+– NLP is a field of AI with the ability of a computer to
+understand, analyze, manipulate, and potentially
+generate human language.
+
+– This is simply the process of making computer
+systems to understand basic human interactions.
+
+– Example: google assistant, Siri, Alexa, chatbots for
+customer support.
+
+Unit 1
+Prepared by: Chhaya Patel 19
+
+Application of AI
+
+– Google’s AI-powered predictions (E.g.: Google Maps)
+– Ride-sharing applications (E.g.: Uber, Lyft)
+– AI Autopilot in Commercial Flights
+– Spam filters on E-mails
+– Plagiarism checkers and tools
+– Facial Recognition
+– Search recommendations
+– Voice-to-text features
+– Smart personal assistants (E.g.: Siri, Alexa)
+– Fraud protection and prevention.
+
+Unit 1
+Prepared by: Chhaya Patel 20
+
+Problem and Problem Solving
+
+ To build system to solve particular problem, we need to
+do 4 things:
+ Define problem precisely.
+ Analyze the problem.
+ Represent task knowledge.
+ Choose the best problem solving technique.
+ Problem solving is a process of generating solutions
+from the observed data.
+
+Unit 1
+Prepared by: Chhaya Patel 21
+
+State and State Space search
+
+ A state is a representation of problem elements at a
+given moment.
+ A state space is the set of all possible states reachable
+from the initial state.
+ A state space creates a graph in which the nodes are
+states and the arcs between nodes are actions.
+ In a state space, a path is a sequence of states
+connected by a sequence of actions.
+ The solution of a problem is a part of the graph formed
+by the state space. Unit 1
+
+Prepared by: Chhaya Patel 22
+
+State and State Space search
+
+Unit 1
+Prepared by: Chhaya Patel 23
+Chess - Initial Position Position after a legal
+
+move
+
+Define the Problem as State
+Space Search
+
+• A state space is formally represented as a tuple
+S:⟨S, A, Action(s) ,Result(s, a) ,Cost(s, a)⟩
+– S is the set of all possible states
+– A is the set of possible actions
+– Action(s) is possible action to perform in a certain state;
+– Result(s,a) is a state reached performing action a in state s
+– Cost(s,a) is the cost of performing an action a in state s.
+
+Unit 1
+Prepared by: Chhaya Patel 25
+
+State Space Search
+1 - 8 Puzzle Problem
+
+ Problem Definition: The 8 puzzle consists of eight
+numbered, movable tile set in a 3x3 frame. One cell of
+the frame is always empty thus making it possible to
+move an adjacent numbered tile into the empty cell.
+Such a puzzle is illustrated in following diagram.
+
+26
+
+2 8 3
+
+1 6 4
+
+7 5
+
+1 2 3
+
+8 4
+
+7 6 5
+
+Initial State Goal State
+
+State Space Search
+1 - 8 Puzzle Problem
+
+ A solution to the problem is an appropriate sequence of
+moves, such as “move tiles 5 to the right, move tile 7 to
+the left ,move tile 6 to the down” etc...
+
+Unit 1
+Prepared by: Chhaya Patel 27
+
+Initial State Next State after
+one legal move
+
+2 8 3
+
+1 6 4
+
+7 5
+
+2 8 3
+
+1 4
+
+7 6 5
+
+28
+
+2
+8
+3
+1
+6
+4
+7
+5
+
+2
+8
+3
+1
+4
+7
+6
+5
+
+2
+3
+1
+8
+4
+7
+6
+5
+
+1
+2
+3
+8
+4
+7
+6
+5
+
+1
+2
+3
+8
+4
+7
+6
+5
+
+2
+8
+3
+1
+6
+4
+7
+5
+
+2
+8
+3
+1
+6
+4
+7
+5
+
+2
+8
+3
+1
+4
+7
+6
+5
+
+2
+8
+3
+1
+4
+7
+6
+5
+
+2
+8
+3
+7
+1
+4
+6
+5
+
+8
+3
+2
+1
+4
+7
+6
+5
+
+2
+3
+1
+8
+4
+7
+6
+5
+
+2
+3
+1
+8
+4
+7
+6
+5
+
+1
+2
+3
+7
+8
+4
+6
+5
+
+12345
+
+6
+
+Unit 1
+Prepared by: Chhaya Patel 29
+
+Activity
+Solve given 8 Puzzle Problem
+
+1 2 3
+
+8 4
+
+7 6 5
+
+1 2 3
+
+6 4
+
+8 7 5
+
+Initial State Goal State
+
+8-Puzzle Solver (deniz.co)
+
+Unit 1
+Prepared by: Chhaya Patel 30
+
+Problem Definition:
+– You are given two jugs, 4-ltr and 3-ltr.
+– Neither jug has any measuring markings on it.
+– A pump which has unlimited water which you can
+use to fill the jug.
+– How can you get exactly 2ltr of water in the a 4-ltr
+jug?
+
+Unit 1
+Prepared by: Chhaya Patel 31
+
+State Space Search
+2 - Water Jug
+
+– We will represent a state of the problem as a tuple (x, y)
+– x = amount of water in the 4ltr jug
+– y = amount of water in the 3ltr jug
+1. Initial State : (0, 0) ; 0 ≤ x ≤ 4, and 0 ≤ y ≤ 3.
+2. Goal state is (2, n) for any value of n.
+
+Unit 1
+Prepared by: Chhaya Patel 32
+
+State Space Representation
+2 - Water Jug
+
+State Space Representation
+2 - Water Jug
+
+Unit 1
+Prepared by: Chhaya Patel 33
+
+Production Rules
+Sr. Current state Next state Description
+
+1 (x, y) If x<4 (4, y) fill the 4- ltr jug
+
+2 (x, y) If y<3 (x,3) fill the 3-ltr jug
+
+3 (x, y) If x>0 (x-d, y) pour some water out of the 4-ltr jug
+
+4 (x, y) If y>0 (x, y-d) pour some water out of the 3-ltr jug
+
+5 (x, y) If x>0 (0, y) empty the 4-ltr jug on the ground
+6 (x, y) If y>0 (x, 0) empty the 3-ltr jug on the ground
+
+State Space Representation
+2 - Water Jug
+
+34
+
+Production Rules
+
+Sr. Current state Next state Description
+
+7 (x, y) If x + y >= 4 & y>0 (4,y-(4-x)) pour water from the 3-ltr
+jug into the 4-ltr jug until
+the 4-ltr jug is full
+
+8 (x, y) If x + y >= 3 & x>0 (x-(3-y),3)) pour water from the 4-ltr
+jug into the 3-ltr jug until
+the 3-ltr jug is full
+
+9 (x, y) If x + y <= 4 & y>0 (x+y,0) pour all the water from the
+3-ltr jug into the 4-ltr jug
+
+State Space Representation
+2 - Water Jug
+
+35
+
+Production Rules
+
+Sr. Current state Next state Description
+
+10 (x, y) If x + y <= 3 & x>0 (0,x+y) pour all the water from the 4 -
+
+ltr jug into the 3-ltr jug
+
+11 (0,2) (2,0) pour the 2-ltr from the 3 – ltr jug
+
+into the 4-ltr jug
+
+12 (2,y) (0, y) empty the 2 ltr in the 4 ltr
+
+on the ground
+
+State Space Representation
+2 - Water Jug
+
+36
+
+Productions for the water jug
+
+4- ltr Jug 3- ltr Jug Rule Applied
+0 0
+0 3 2
+3 0 9
+3 3 2
+4 2 7
+0 2 5 or 12
+2 0 9 or 11
+
+State Space Representation
+3 - Play Chess
+
+ we have to specify
+1. The starting position of the chess board
+2. The rules that define legal moves
+3. And the board position that represent a win
+1. Initial Position of the chess board : The starting
+position can be described by an 8 X 8 array square in
+which each element square (x, y) describes the board
+position of an appropriate piece in the official chess
+opening position.
+
+Unit 1
+Prepared by: Chhaya Patel 37
+
+State Space Representation
+3 - Play Chess
+
+2. The rules that define legal moves
+• The legal moves provide the way of getting from initial
+state of final state.
+• It can be described as a set of rules consisting of two parts: A
+left side that gives the current position and the right side that
+describes the change to be made to the board position.
+
+3. The board position that represents a win
+• The goal is any board position in which the opponent does
+not have a legal move and his or her “king” is under attack.
+
+Unit 1
+Prepared by: Chhaya Patel 38
+
+State Space Representation
+3 - Play Chess
+
+2. legal move
+Square(file e, rank 3)
+is empty AND
+Square(file e, rank 4)
+is empty
+
+White pawn at
+Square(file e, rank 2)
+
+Unit 1
+Prepared by: Chhaya Patel 39
+
+State Space Representation
+3 - Play Chess
+
+3. The board position that represents a win
+
+Unit 1
+Prepared by: Chhaya Patel 40
+
+Problem Characteristics
+
+1. Is the problem decomposable into a set of independent
+smaller or easier sub-problems?
+2. Can solution steps be ignored or at least undone if they
+prove unwise?
+3. Is the problem’s universe predictable?
+4. Is a good solution to the problem obvious without
+comparison to all other possible solutions?
+
+Unit 1
+Prepared by: Chhaya Patel 41
+
+Problem Characteristics
+
+5. Is the desired solution is a state or a path?
+6. Is a large amount of knowledge required to solve the
+problem or is knowledge important only to constrain
+the search?
+7. Can a computer that is simply given the problem return
+the solution or will the solution of the problem require
+interaction between the computer and a person?
+
+Unit 1
+Prepared by: Chhaya Patel 42
+
+8 Puzzle Analysis with Respect to Seven
+Problem Characteristics
+
+Unit 1
+Prepared by: Chhaya Patel 43
+
+Problem Characteristics Satisfied Justification
+
+Is the problem decomposable ? No Dependent moves
+Can solution steps be ignored or
+at least undone Yes We can undo the previous move
+Is the problem’s universe
+predictable Yes Problem Universe is predictable, it is a
+
+single person game
+
+Is a good solution absolute or
+relative? Absolute Winning position need not be
+
+compared
+
+Is the solution a state or a path? Path Not only solution but how it is achieved
+
+also matters
+
+What is the role of knowledge? Domain specific knowledge is required
+
+to constrain search
+
+Does the task require Interaction
+with a person? No In 8 puzzle additional assistance is not
+
+required
+
+Production System
+
+– Production systems provide appropriate structures for
+performing and describing search processes.
+– A production system has four basic components:
+• A set of rules each consisting of a left side that determines the
+applicability of the rule and a right side that describes the
+operation to be performed if the rule is applied.
+• A database of current facts established during the process of
+inference.
+
+Unit 1
+Prepared by: Chhaya Patel 44
+
+Production System
+
+• A control strategy that specifies the order in which the rules
+will be compared with facts in the database and also specifies
+how to resolve conflicts in selection of several rules or
+selection of more facts.
+• A rule applier.
+– Production systems provide us with good ways of
+describing the operations that can be performed in a
+search for a solution to a problem.
+
+Search techniques
+
+Search Techniques
+
+• Book : Artificial Intelligence, Third Edition,
+Tata-Mc Graw Hill Author(s): E.Rich & K.
+Knight (Chapter - 3)
+
+• https://www.javatpoint.com/search-algorithms-
+in-ai
+
+Unit 2
+Prepared by: Chhaya Patel 1
+
+Search Techniques
+
+• Search: Searching is a step by step procedure to
+solve a search-problem in a given search space. A
+search problem can have three main factors:
+– Search Space: Search space represents a set of possible
+solutions, which a system may have.
+– Start State: It is a state from where agent begins the
+search.
+– Goal state: It is a function which observe the current
+state and returns whether the goal state is achieved or not.
+
+Unit 2
+Prepared by: Chhaya Patel 2
+
+Search Techniques
+
+Unit 2
+Prepared by: Chhaya Patel 3
+
+Uninformed/Blind Search
+
+ Uninformed search does not contain any domain
+knowledge such as closeness, the location of the goal.
+ It operates in a brute-force way as it only includes
+information about how to traverse the tree and how to
+identify leaf and goal nodes.
+ Uninformed search applies a way in which search tree is
+searched without any information about the search
+space like initial state operators and test for the goal, so
+it is also called blind search.
+ It examines each node of the tree until it achieves the
+goal node.
+
+Unit 2
+Prepared by: Chhaya Patel 4
+
+Informed/Heuristic Search
+
+ Informed Search algorithms use domain knowledge.
+ In an informed search, problem information is available
+which can guide the search.
+ Informed search strategies can find a solution more
+efficiently than an uninformed search strategy.
+ Informed search is also called a Heuristic search.
+ A heuristic is a way which might not always be
+guaranteed for best solutions but guaranteed to find a
+good solution in reasonable time.
+
+Unit 2
+Prepared by: Chhaya Patel 5
+
+BFS - Breadth-first Search
+
+ BFS starts searching from the root node of the tree and
+expands all successor node level by level.
+ BFS implemented using FIFO queue data structure.
+ BFS will provide a solution if any solution exists.
+ It requires lots of memory since each level of the tree
+must be saved into memory to expand the next level.
+ BFS needs lots of time if the solution is far away from the
+root node.
+
+Unit 2
+Prepared by: Chhaya Patel 6
+
+DFS - Depth-first Search
+
+ DFS is a recursive algorithm for traversing a tree or graph
+data structure.
+ DFS starts from the root node and follows each path to its
+greatest depth node before moving to the next path.
+ DFS uses a stack data structure for its implementation.
+ DFS requires very less memory as it only needs to store a
+stack of the nodes on the path from root node to the current
+node.
+ There is no guarantee of finding the solution.
+
+Unit 2
+Prepared by: Chhaya Patel 7
+
+BFS - DFS
+
+Unit 2
+Prepared by: Chhaya Patel 8
+
+A
+B C
+
+D E F G
+
+H
+✓
+
+✓ ✓
+
+✓ ✓ ✓
+✓
+
+✓
+
+A
+B C
+
+D E F G
+
+H
+✓
+✓
+
+✓
+
+✓
+
+✓ ✓
+
+✓
+
+Activity
+
+ Reading – Writing
+ Write Difference between DFS and BFS.
+
+Unit 2
+Prepared by: Chhaya Patel 9
+
+Heuristic Search
+
+ Every search process can be viewed as a traversal of a directed
+graph.
+ Nodes represent problem states and the arcs represent relationships
+between states.
+ Domain-specific knowledge must be added to improve search
+efficiency.
+ The Domain-specific knowledge about the problem includes the
+nature of states, cost of transforming from one state to another, and
+characteristics of the goals.
+ This information can often be expressed in the form of Heuristic
+Evaluation Function.
+
+Unit 2
+Prepared by: Chhaya Patel 10
+
+Heuristic Search
+
+ Some prominent intelligent search algorithms are stated
+below:
+ Generate and Test Search
+ Best-first Search
+ A* Search
+ Constraint Search
+ Means-ends analysis
+
+Unit 2
+Prepared by: Chhaya Patel 11
+
+Generate and Test Search
+
+ Its Heuristic search technique.
+ Its DFS with Backtracking
+ It is also known as British Museum algorithm.
+
+Unit 2
+Prepared by: Chhaya Patel 12
+
+Algorithm: Generate-And-Test
+1.Generate a possible solution.
+2.Test to see if this is the expected
+solution.
+3.If the solution has been found quit else
+go to step 1.
+
+Generate and Test Search
+
+Unit 2
+Prepared by: Chhaya Patel 13
+
+Best First Search
+
+Unit 2
+Prepared by: Chhaya Patel 14
+ Best first search uses the concept of a priority queue and
+heuristic search.
+ It is a search algorithm that works on a specific rule.
+ The aim is to reach the goal from the initial state via the shortest
+path.
+ Best first search combines the advantages of both DFS and BFS
+into a single method.
+ DFS is good because it allows a solution to be found without
+expanding all competing branches. BFS is good because it does
+not get trapped on dead end paths.
+
+Best First Search
+
+Unit 2
+Prepared by: Chhaya Patel 15
+ One way of combining BFS and DFS is to follow a single
+path at a time, but switch paths whenever some competing
+path looks more promising than the current one does.
+ At each step of the Best First Search process, we select the
+most promising of the nodes we have generated so far.
+ We then expand the chosen node by using the rules to
+generate its successors.
+ If one of them is a solution, we can quit. If not, all those
+new nodes are added to the set of nodes generated so far.
+
+Best First Search - Algorithm
+
+Unit 2
+Prepared by: Chhaya Patel 16
+
+ we assume two different list of nodes:
+ OPEN list  is the list of nodes which have been
+discovered but yet not expanded(whose
+children/successors are yet not discovered)
+
+ CLOSED list  nodes whose successors are also
+generated.
+ f(n) = h (n) where h(n) is estimated cost from current node
+to the goal node
+
+Best First Search
+Algorithm
+
+Unit 2
+Prepared by: Chhaya Patel 17
+
+Step 1: Place the starting node into the OPEN list.
+Step 2: If the OPEN list is empty, Stop and return failure.
+Step 3: Remove the node n, from the OPEN list which has the lowest value of h(n),
+and places it in the CLOSED list.
+Step 4: Expand the node n, and generate the successors of node n.
+Step 5: Check each successor of node n, and find whether any node is a goal node or
+not. If any successor node is goal node, then return success and terminate the search,
+else proceed to Step 6.
+Step 6: For each successor node, algorithm checks for evaluation function f(n), and
+then check if the node has been in either OPEN or CLOSED list. If the node has not
+been in both list, then add it to the OPEN list.
+Step 7: Return to Step 2.
+
+Best First Search - Example
+
+Unit 2
+Prepared by: Chhaya Patel 18
+
+ Demonstrate Best First search for following graph.
+ Path = A – B – G and Total cost = 11
+
+Example : Find Shortest path using
+best first search
+
+Unit 2
+Prepared by: Chhaya Patel 19
+Path = SCDFG
+Total Cost = 25
+
+A* Best First Search
+
+Unit 2
+Prepared by: Chhaya Patel 20
+ A* algorithm works based on heuristic methods and this
+helps achieve optimality.
+ f(n) = g(n) + h(n)
+ Path = A-E-D-G
+
+Example : Find Shortest path using
+A* Best First Search
+
+Unit 2
+Prepared by: Chhaya Patel 21
+
+Example : Find Shortest path using
+A* Best First Search
+
+Unit 2
+Prepared by: Chhaya Patel 22
+
+S
+
+A
+
+B
+
+C
+16 14
+
+18
+
+D
+18
+
+E
+16
+
+B F
+31 17
+
+Example : Find Shortest path using
+A* Best First Search
+
+Unit 2
+Prepared by: Chhaya Patel 23
+
+S
+
+A
+
+B
+
+C
+16 14
+
+18
+
+D
+18
+
+E
+
+F
+
+24
+
+G
+19
+
+16
+
+17
+
+D
+
+Example : Find Shortest path using
+A* Best First Search
+
+Unit 2
+Prepared by: Chhaya Patel 24
+
+S
+
+A
+
+B
+
+C
+16 14
+
+18
+
+D
+18
+
+E
+
+F
+
+G
+19
+
+B F
+36 23
+
+16
+
+17
+
+Example : Find Shortest path using
+A* Best First Search
+
+Unit 2
+Prepared by: Chhaya Patel 25
+
+S
+
+A
+
+B
+
+C
+16 14
+
+18
+
+E
+
+F
+
+19
+
+D E
+14 15
+
+C F
+22 19
+
+G
+
+D
+
+16
+
+17
+
+Example : Find Shortest path using
+A* Best First Search
+
+Unit 2
+Prepared by: Chhaya Patel 26
+
+S
+
+A
+
+B
+
+C
+16 14
+
+18
+
+E
+
+F
+
+19
+
+D E
+14 15
+
+A F
+27
+
+16
+
+D G
+23 18
+
+G
+16
+
+17
+
+A* Algorithm
+
+Unit 2
+Prepared by: Chhaya Patel 27
+
+ Step1: Place the starting node in the OPEN list.
+ Step 2: Check if the OPEN list is empty or not, if the list is empty then return
+failure and stops.
+ Step 3: Select the node from the OPEN list which has the smallest value of
+evaluation function (g+h), if node n is goal node then return success and stop,
+otherwise
+ Step 4: Expand node n and generate all of its successors, and put n into the closed
+list. For each successor n', check whether n' is already in the OPEN or CLOSED
+list, if not then compute evaluation function for n' and place into Open list.
+ Step 5: Else if node n' is already in OPEN and CLOSED, then it should be
+attached to the back pointer which reflects the lowest g(n') value.
+ Step 6: Return to Step 2.
+
+Problem Decomposition
+
+Unit 2
+Prepared by: Chhaya Patel 28
+ When a problem can be divided into a set of sub
+problems, where each sub problem can be solved
+separately and a combination of these will be a solution.
+ It use AND-OR graph to find more than one solution.
+
+
+AO* Algorithm
+
+Unit 2
+Prepared by: Chhaya Patel 29
+
+ AO* is informed search based on BFS.
+ It is based on problem decomposition.
+ It use AND-OR graph to find more than one solutions.
+ AND-OR graph is useful for representing the solution of
+problems that can be solved by decomposing them into
+set of smaller problems.
+ All of which must be solved.
+
+AO* Algorithm
+
+Unit 2
+Prepared by: Chhaya Patel 30
+ Node in AO* algorithm will point both down to its
+successors and up to its parent nodes. (backtracking).
+ Each node in graph will have heuristics value associated
+with it.
+ Cost function f(n) = g(n) + h(n)
+ g(n) = actual cost / edge cost
+ h(n) = heuristics cost
+ Here assume g(n) = 1
+
+AO* Algorithm – Example-1
+
+Unit 2
+Prepared by: Chhaya Patel 31
+
+Cost = Min (18,15)
+
+= 15
+
+AO* Algorithm – Example-2
+
+Unit 2
+Prepared by: Chhaya Patel 32
+
+Cost = Min (12,16)
+
+= 12
+
+AO* Algorithm
+
+Unit 2
+Prepared by: Chhaya Patel 33
+
+Constraint Satisfaction Problem
+
+Unit 2
+Prepared by: Chhaya Patel 34
+CSP - is a problem that requires its solution within some
+limitations or conditions also known as constraints.
+It consists of the following:
+1. Variables: which stores the solution (finite set)
+
+(V = {V1, V2, V3,....., Vn})
+
+2. Domain: set of discrete values known as domain from
+which the solution is picked (D = {D1, D2, D3,.....,Dn})
+3. Constraints: (C = {C1, C2, C3,......, Cn})
+
+Constraint Satisfaction Problem
+
+Unit 2
+Prepared by: Chhaya Patel 35
+
+Example:
+– Cryptarithmetic problem
+– Crossword puzzle
+– Sudoku game
+• fill the empty squares with numbers ranging from 1 to 9 in such a
+way that no row, column or a block has a number repeating
+itself.
+• consider the Sudoku problem again. Suppose that a row, column
+and block already have 3, 5 and 7 filled in. Then the domain for
+all the variables in that row, column and block will be {1, 2, 4, 6,
+8, 9}.
+
+Unit 2
+Prepared by: Chhaya Patel 36
+
+Crypt-arithmetic Puzzle
+Initial state:
+• Assign values between 0 to 9.
+• No two letters have the same value.
+• The sum of the digits must be as shown.
+
+1
+
+1
+9
+
+0
+
+S
+E
+N
+D
+M
+O
+R
+Y
+
+1
+
+1
+
+9
+
+0
+
+0
+
+5
+
+6
+
+5
+6
+
+5
+
+5
+
+6
+
+8
+
+7
+
+2
+
+1
+
+7
+
+8
+2
+
+Unit 2
+Prepared by: Chhaya Patel 37
+
+More Examples of
+Crypt-arithmetic Puzzle
+
+Unit 2
+Prepared by: Chhaya Patel 38
+
+More Examples of
+Crypt-arithmetic Puzzle
+
+Unit 2
+Prepared by: Chhaya Patel 39
+
+Means-Ends Analysis
+
+ MEA is mixture of the two directions forward /
+Backward is appropriate for solving a complex and
+large problem.
+ It first solve the major part of a problem and then go
+back and solve the small problems arise during
+combining the big parts of the problem. Such a
+technique is called Means-Ends Analysis.
+ The MEA analysis process centered on the evaluation
+of the difference between the current state and goal
+state.
+
+Unit 2
+Prepared by: Chhaya Patel 40
+
+Means-Ends Analysis
+
+ Steps of MEA
+1. First, evaluate the difference between Initial State and final
+State.
+2. Select the various operators which can be applied for each
+difference.
+3. Apply the operator at each difference, which reduces the
+difference between the current state and goal state.
+
+Unit 2
+Prepared by: Chhaya Patel 41
+
+Means-Ends Analysis
+
+ Example
+
+Unit 2
+Prepared by: Chhaya Patel 42
+
+Means-Ends Analysis
+
+ Solution
+ we will first find the differences between initial states
+and goal states, and for each difference, we will
+generate a new state and will apply the operators. The
+operators we have for this problem are:
+ Move
+ Delete
+ Expand
+
+Unit 2
+Prepared by: Chhaya Patel 43
+
+Means-Ends Analysis
+
+ Solution
+
+Unit 2
+Prepared by: Chhaya Patel 44
+
+Means-Ends Analysis
+
+ But sometimes it is possible that an operator cannot be
+applied to the current state.
+ So, we create the sub-problem of the current state, in
+which operator can be applied, such type of backward
+chaining in which operators are selected, and then sub
+goals are set up to establish the preconditions of the
+operator is called Operator Subgoaling.
+
+Unit 2
+Prepared by: Chhaya Patel 45
+
+Means-Ends Analysis
+
+Hill Climbing Algorithm
+
+Unit 2
+Prepared by: Chhaya Patel 47
+ Hill climbing algorithm is a local search algorithm which
+continuously moves in the direction of increasing value to
+find the best solution to the problem.
+
+ It is also called greedy local search as it only looks to its
+good immediate neighbor state and not beyond that.
+
+ A node of hill climbing algorithm has two components
+which are state and value.
+
+Features of Hill Climbing Algorithm
+
+Unit 2
+Prepared by: Chhaya Patel 48
+ Generate and Test variant: It takes the feedback from
+the test procedure. Then this feedback is utilized by the
+generator in deciding the next move in search space.
+
+ Greedy approach: Hill-climbing algorithm search moves
+in the direction which optimizes the cost.
+
+ No backtracking: It does not backtrack the search space,
+as it does not remember the previous states.
+
+Types of Hill Climbing
+
+Unit 2
+Prepared by: Chhaya Patel 49
+1. Simple Hill climbing: It examines the neighboring nodes
+one by one and selects the first neighboring node which
+optimizes the current cost as the next node.
+2. Steepest-Ascent Hill climbing: It first examines all the
+neighboring nodes and then selects the node closest to the
+solution state as of the next node.
+
+In simple hill climbing, the first closer node is chosen, whereas in
+steepest ascent hill climbing all successors are compared and the
+
+closest to the solution is chosen.
+
+Block World problem using
+Simple Hill Climbing
+
+Unit 2
+Prepared by: Chhaya Patel 50
+
+ World consists of
+ A flat surface such as a table.
+ A set of identical blocks which are identified by letters.
+ The blocks can be stacked one on one to form towers.
+ Stacking is achieved using a robot arm which has
+fundamental operations and states.
+ The robot can hold one block at a time and only one block
+can be moved at a time.
+
+Block World problem using
+Simple Hill Climbing
+
+Unit 2
+Prepared by: Chhaya Patel 51
+B
+C
+D
+
+A
+B
+C
+A D
+
+Local heuristic:
++1 for each block that is resting on the thing it is supposed to be resting on.
+-1 for each block that is resting on a wrong thing.
+
+initial state h=0 goal state h=4
++1
+-1
++1
+-1 +1
++1
++1
+
++1
+
+Unit 2
+Prepared by: Chhaya Patel 52
+
+B
+C
+D A
+B
+C
+
+Start
+
+Goal
+
+A
+
+D
+
+h=0
+
+h=4
+
+B
+C
+D
+A
+
+B
+C D
+
+A B
+C
+
+A D
+
+h=0
+
+h=0
+
+h=0
+
+B
+C
+D
+
+A
+
+h=2
+
++1
+
++1
++1
+
+-1
+
+Block World problem using
+Simple Hill Climbing
+
+Unit 2
+Prepared by: Chhaya Patel 53
+
+Block World problem using
+Hill Climbing – Local Maxima
+
+Drawbacks of Hill Climbing
+
+Unit 2
+Prepared by: Chhaya Patel 54
+
+Drawbacks of Hill Climbing
+
+Unit 2
+Prepared by: Chhaya Patel 55
+ Local Maxima: a local maximum is a state that is better than all its
+neighbors but is not better than some other states further away.
+ To overcome local maximum problem: Utilize backtracking
+technique. Maintain a list of visited states and explore a new path.
+
+ Plateau (Flat): a plateau is a flat area of the search space in which, a
+whole set of neighboring states have the same values.
+ To overcome plateaus: Make a big jump. Randomly select a state far
+away from current state.
+
+ Ridge: is a special kind of local maximum. It is an area of the search
+space that is higher than surrounding areas and that itself has slop.
+ To overcome Ridge: In this kind of obstacle, use two or more rules
+before testing. It implies moving in several directions at once.
+
+Block World problem using
+Steepest-Ascent Hill climbing
+
+Unit 2
+Prepared by: Chhaya Patel 56
+B
+C
+D
+
+A
+B
+C
+Start Goal A D
+
+Global heuristic:
+For each block that has the correct support structure:
+
++1 to every block in the support structure.
+
+For each block that has a wrong support structure:
+
+-1 to every block in the support structure.
+h=-6 h=6
+
++1
++2
++3
+
+0
+
+-1
+-2
+-3
+
+0
+
+Unit 2
+Prepared by: Chhaya Patel 57
+
+B
+C
+D
+
+A
+B
+C
+
+A
+
+D
+
+h=-6
+
+h=6
+
+B
+C
+D
+A
+
+B
+C D
+
+A B
+C
+
+A D
+
+h=-6
+
+h=-2
+
+h=-1
+
+B
+C
+D
+
+A
+
+h=-3
+
+Block World problem using
+Steepest-Ascent Hill climbing
+
+Simple Hill Climbing - Algorithm
+
+Unit 2
+Prepared by: Chhaya Patel 58
+1. Evaluate the initial state. If it is also goal state, then return it and
+quit. Otherwise continue with the initial state as the current state.
+2. Loop until a solution is found or until there are no new operators
+left to be applied in the current state:
+a. Select an operator that has not yet been applied to the current
+state and apply it to produce a new state.
+b. Evaluate the new state
+
+i. If it is the goal state, then return it and quit.
+ii. If it is not a goal state but it is better than the current state,
+then make it the current state.
+iii. If it is not better than the current state, then continue in the
+loop.
+
+Steepest-Ascent Hill Climbing
+Algorithm
+
+Unit 2
+Prepared by: Chhaya Patel 59
+1. Evaluate the initial state. If it is also a goal state, then return it and
+quit. Otherwise, continue with the initial state as the current state.
+2. Loop until a solution is found or until a complete iteration produces
+no change to current state:
+a. Let S be a state such that any possible successor of the current state
+will be better than S.
+b. For each operator that applies to the current state do:
+
+Apply the operator and generate a new state
+Evaluate the new state. If it is a goal state, then return it and quit.
+If not, compare it to S. If it is better, then set S to this state. If it
+is not better, leave S alone.
+
+c. If the S is better than the current state, then set current state to S.
+
+
+Introduction to Machine Learning
+
+Prepared by: Chhaya Patel 1
+
+Types of Data
+
+ Structured data: is data with a high degree of organization,
+usually stored in some sort of spreadsheet or table. Example: Excel
+sheet, SQL database in a table that consists of columns and rows.
+ Semi-structured: is data which has some degree of organization
+in it. It is not as rigorously structured as structured data, but also
+not as messy as unstructured data. Example: HTML file, JSON
+file, XML file.
+ Unstructured data: with no predefined organizational form and
+no specific format. Example: image file, logo, video file, PDF file.
+
+Prepared by: Chhaya Patel 2
+
+Types of Data in Statistics
+
+Prepared by: Chhaya Patel 3
+
+Types of Data in Statistics
+
+ Qualitative Data (Categorical data)
+ Categorical data is a collection of information that is divided into groups.
+ Bio data of employee, student class division etc.
+ There are two types of categorical data
+ Nominal data
+ This is a type of data used to name variables without providing any
+numerical value. Example: Gender, hair color etc.
+ Ordinal data.
+ This is a data type with a set order or scale to it. Example: grade of marks,
+economicalstatus.
+
+Prepared by: Chhaya Patel 4
+
+Types of Data in Statistics
+
+ Quantitative data (Numerical data)
+ Quantitative data can be expressed as a number or can be quantified.
+ it can be measured by numerical variables.
+ There are two types of Numerical data
+ Discrete data (Countable)
+ Discrete data is a count that involves only integers. The discrete values
+cannot be subdivided into parts.
+ Example: no. ofstudentsin class, no. of workers in company
+
+Prepared by: Chhaya Patel 5
+
+Types of Data in Statistics
+
+ Quantitative data (Numerical data)
+ Continuous data (Measurable)
+ Continuous data is information that could be meaningfully divided into finer
+levels.
+ It can be measured on a scale.
+ The continuous variables can take any value between two numbers.
+ you can measure your height at very precise scales.
+ Example: width, temperature,time
+
+Prepared by: Chhaya Patel 6
+
+Types of Data in Statistics
+
+ Find type of data
+• What is your household income?
+– Below 5,00,000 or 5,00,001 – 10,00,000 or above
+– Answer: Nominal data
+• What is your hair color?
+– nominal data.
+• What is your gender?
+– Answer: Nominal data
+
+Prepared by: Chhaya Patel 7
+
+Types of Data in Statistics
+
+ Find type of data
+• Customer satisfaction data
+– Answer: ordinal data
+• What is your highest level of education?
+– School or High School or B.Tech, M.Tech, Ph.D
+– Answer: Nominal data
+• Happiness level: 1-5
+– Answer: ordinal data
+
+Prepared by: Chhaya Patel 8
+
+Types of Data in Statistics
+
+ Find type of data
+– Marital status
+• Nominal Data
+– The height of children
+• continuous data
+– The square footage of a two-bedroom house
+• continuous data
+– The number of workers in a company
+• discrete data
+
+Prepared by: Chhaya Patel 9
+
+What is Machine Learning?
+
+ Machine Learning
+ ML is a type of AI that allows software applications to
+become more accurate at predicting outcomes without
+being explicitly programmed to do so.
+ OR
+ Define machine learning as a set of methods that can
+automatically detect patterns in data, and then use the
+uncovered patterns to predict future data.
+
+Prepared by: Chhaya Patel 10
+
+Types of machine learning
+
+Prepared by: Chhaya Patel 11
+
+Supervised Learning
+
+ Supervised Learning
+ Supervised machine learning is defined by its use of labelled datasets to train
+algorithms that is used to classify data or predict outcomes accurately.
+ Supervised learning uses a training data set to teach models and get desired
+output.
+ Training dataset includes inputs and correct outputs, which allow the model
+to learn over time.
+ Input data is fed into the model, it adjusts its weights until the model has
+been fitted appropriately, which occurs as part of the cross validation
+process.
+ The algorithm measures its accuracy through the loss function, adjusting
+until the error has been sufficiently minimized.
+
+Prepared by: Chhaya Patel 12
+
+Classification
+
+ Classification:
+ Classification is the process of categorizing a given set of data into classes.
+ It takes labelled input data, which means it contains input with the
+corresponding output.
+ In Classification, a program learns from the given dataset or observations
+and then classifies new observation into a number of classes or groups. Such
+as, Yes or No, 0 or 1, Spam or Not Spam, cat or dog, etc.
+ Classes can be called as targets/labels or categories.
+ It performs on both structured data and unstructured data.
+
+Prepared by: Chhaya Patel 13
+
+Classification
+
+ Classification:
+ The algorithm which implements the classification on a dataset is known as
+a classifier.
+ y=f(x), where y = categorical output and x is input.
+ There are two types of Classifications:
+ Binary Classifier:
+ If the classification problem has only two possible outcomes, then it is called
+as Binary Classifier.
+ Examples: YES or NO, MALE or FEMALE, SPAM or NOT SPAM, CAT
+or DOG, etc.
+
+Prepared by: Chhaya Patel 14
+
+Classification
+
+ Classification:
+ Multi-classClassifier:
+ If a classification problem has more than two outcomes, then it is called as
+Multi-classClassifier.
+ Example: Classifications of types of crops, Classification of types of music.
+
+Prepared by: Chhaya Patel 15
+
+Classification
+
+ Use cases of Classification Algorithms
+ Email Spam Detection
+ Speech Recognition
+ Identifications of Cancer tumor cells.
+ Drugs Classification
+ Biometric Identification, etc.
+
+Prepared by: Chhaya Patel 16
+
+Regression
+
+ Regression
+ Regression is used to understand the relationship between dependent and
+independent variables.
+ Regression is usually defined as determining relationships between two or
+more variables.
+ It is a continuous prediction problem. (Stocks increase or decrease in Stock
+Exchange, Climate changes after 3 years).
+ Linear Regression is used for solving Regression problems.
+
+Prepared by: Chhaya Patel 17
+
+Regression
+
+ Linear Regression
+ The Linear Regression Algorithm provides the relation between an
+independent(input) and a dependent(output) variable.
+ It demonstrates the impact on the dependent variable when the independent
+variable is changed in any way.
+ An example of the Linear Regression Algorithm usage is to analyze the
+property prices in the area according to the size of the property, number of
+rooms, etc.
+ Simple linear regression - Single input variable (x)
+ Multiple linear regression - Multiple input variable (x1,x2,x3.....)
